@@ -1,24 +1,57 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション名	
+dishmaker 
 
-Things you may want to cover:
+## アプリケーション概要	
+ChatGPTを応用したアプリケーションの開発を目指すための個人学習用アプケーションです。
+内容としては、冷蔵庫の中身から作成できる料理を教えてくれるアプリです。
 
-* Ruby version
+## URL
+※	デプロイ済みのURLを記載。デプロイが済んでいない場合は、デプロイが完了次第記載すること。
 
-* System dependencies
+## テスト用アカウント	
+ログイン機能等を実装した場合は、ログインに必要な情報を記載。
 
-* Configuration
+<b>Basic認証</b>
+ID
+Pass
 
-* Database creation
+## 利用方法	
+このアプリケーションの利用方法を記載。説明が長い場合は、箇条書きでリスト化すること。
 
-* Database initialization
+## アプリケーションを作成した背景	
+アプリケーション開発にあたり、今後生活になくてはならないであろうChatGPTを利用したいと考えた。
+まずは身の回りのあったらいいものを考え、それを一つの形に落とし込もうと考え作成に至った。
 
-* How to run the test suite
+## 洗い出した要件	
+要件定義をまとめたスプレッドシートのリンクを記載。
 
-* Services (job queues, cache servers, search engines, etc.)
+## 実装した機能についての画像やGIFおよびその説明
+※	実装した機能について、それぞれどのような特徴があるのかを列挙する形で記載。画像はGyazoで、GIFはGyazoGIFで撮影すること。
 
-* Deployment instructions
+## 実装予定の機能	
+洗い出した要件の中から、今後実装予定の機能がある場合は、その機能を記載。
 
-* ...
+## データベース設計	
+ER図を添付。
+
+## 画面遷移図	
+画面遷移図を添付。
+
+## 開発環境	
+<b>言語</b>
+Ruby on Rails
+
+<b>API</b>
+ChatGPT API
+
+<b>gem</b>
+devise
+openAI
+
+## ローカルでの動作方法
+※	git cloneしてから、ローカルで動作をさせるまでに必要なコマンドを記載。
+
+## 夫したポイント
+※	制作背景・使用技術・開発方法・タスク管理など、企業へＰＲしたい事柄を記載。
