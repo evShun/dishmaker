@@ -2,8 +2,13 @@
   <div class="header">
     <%= link_to 'Dish Maker', root_path, class: "logo" %>
     <div class="header-user">
+      <% if user_signed_in? %>
+      <%= link_to current_user.nickname, fridge_path(current_user.id), class: "header-btn" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "header-btn" %> 
+      <% else %>
       <%= link_to 'ログイン', user_session_path, class: "header-btn" %>
       <%= link_to '新規登録', new_user_registration_path, class: "header-btn" %>
+      <% end %>
     </div>
   </div>
   <div class="sub-header"></div>
