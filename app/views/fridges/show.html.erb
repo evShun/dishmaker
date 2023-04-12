@@ -8,10 +8,11 @@
     <%= f.submit "作成" %>
   <% end %>
   </div>
+  
   <div class="own-fredges">
     <%# fredgesを表示させる %>
     <% @fridges.each do |fridge| %>
-    <%= link_to fridge.name, fridge_path(fridge.id), class:"btn" %>
+    <%= link_to fridge.name, fridge_food_path(fridge.id), class:"btn" %>
     <% end %>
   </div>
 </div>
