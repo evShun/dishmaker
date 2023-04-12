@@ -1,4 +1,12 @@
 <%= render "shared/header" %>
-fridge 
-<%# link_to '冷蔵庫', fridge_path(current_user.id), class: "main-btn" %>
+fridge <br><br>
+
+ <% if user_signed_in? %>
+ <%= link_to '料理を聞く', fridge_path(current_user.id), class: "header-btn"%>
+ <% else %>
+ <%= link_to 'アカウントを作成する', new_user_registration_path, class: "header-btn" %>
+ <% end %>
+
+
+
 <%= render "shared/footer" %>
