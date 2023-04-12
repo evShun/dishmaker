@@ -1,3 +1,62 @@
 <%= render "shared/header" %>
-fridge  show
+<div class="show-contents">
+  <div class="fridge-naking">
+  <%= form_with model: @fridge ,local: true do |f| %>
+    冷蔵庫を作成する<br><br>
+    <div>冷蔵庫の名前</div>
+    <%= f.text_field :name, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%><br>
+    <%= f.submit "作成" %>
+  <% end %>
+  </div>
+  <div class="own-fredges">
+    <%# fredgesを表示させる %>
+    <% @fridges.each do |fridge| %>
+    <%= link_to fridge.name, fridge_path(fridge.id), class:"btn" %>
+    <% end %>
+  </div>
+</div>
+
+
 <%= render "shared/footer" %>
+
+<style>
+  .show-contents{
+    margin: 0 auto;
+    width: 300px;
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+  }
+  .fridge-naking{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  .own-fredges{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: lightblue;
+  }
+  .input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  .btn{
+    display: block;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+  }
+</style>
+
