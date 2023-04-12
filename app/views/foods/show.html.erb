@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+冷蔵庫の中身<br>
+<% @foods.each do |food| %>
+  <div class="item">
+  <%= food.item %><br>
+
+  </div>
+<% end %>
+<br>
+食材を追加する
+<%= form_with url:fridge_foods_path, model: @food ,local: true do |f| %>
+  <div>食材の名前</div>
+  <%= f.text_field :item, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%><br>
+  <%= f.submit "追加" %>
+<% end %>
+
+夕食を作る！
+
+<%= render "shared/footer" %>
+
+<style>
+  .item{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px;
+    background-color: lightblue;
+  }
+  .input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+</style>
