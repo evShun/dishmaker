@@ -1,12 +1,32 @@
 <%= render "shared/header" %>
-fridge <br><br>
-
- <% if user_signed_in? %>
- <%= link_to '料理を聞く', fridge_path(current_user.id), class: "header-btn"%>
- <% else %>
- <%= link_to 'アカウントを作成する', new_user_registration_path, class: "header-btn" %>
- <% end %>
-
-
-
+<div class="main">
+  <br><br>
+  <% if user_signed_in? %>
+    <%= link_to '料理を聞く', fridge_path(current_user.id), class: "main-btn"%>
+    <% else %>
+    <%= link_to 'アカウントを作成する', new_user_registration_path, class: "main-btn" %>
+  <% end %>
+</div>
 <%= render "shared/footer" %>
+
+<style>
+.main{
+  text-align: center;
+  height: 80vh;
+  width: 100vw;
+  background-color:lightyellow;
+  margin: 0;
+}
+.main-btn{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #000000;
+}
+</style>
