@@ -154,4 +154,51 @@
             </root>
         </mxGraphModel>
     </diagram>
+    <diagram id="O0HiGvSxyw9yjShg33WQ" name="ページ2">
+        <mxGraphModel dx="662" dy="368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-1" value="ホーム画面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-2" value="サインアップ画面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-3" value="ログイン画面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-4" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.667;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.329;entryY=1.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qjr5mLiy7uIeyFjANKU4-2" target="qjr5mLiy7uIeyFjANKU4-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="180" y="370" as="sourcePoint"/>
+                        <mxPoint x="230" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-5" value="テーブル選択画面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-6" value="テーブル画面" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="260" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-7" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="qjr5mLiy7uIeyFjANKU4-5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="290" as="sourcePoint"/>
+                        <mxPoint x="340" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-8" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qjr5mLiy7uIeyFjANKU4-5" target="qjr5mLiy7uIeyFjANKU4-6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="490" y="320" as="sourcePoint"/>
+                        <mxPoint x="540" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="qjr5mLiy7uIeyFjANKU4-9" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=0.339;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.656;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="qjr5mLiy7uIeyFjANKU4-3" target="qjr5mLiy7uIeyFjANKU4-1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="290" y="400" as="sourcePoint"/>
+                        <mxPoint x="240" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
