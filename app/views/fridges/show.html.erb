@@ -8,13 +8,13 @@
     <%= f.submit "作成" %>
   <% end %>
   </div>
-  
-  <div class="own-fredges">
+
     <%# fredgesを表示させる %>
-    <% @fridges.each do |fridge| %>
-    <%= link_to fridge.name, fridge_food_path(fridge.id), class:"btn" %>
-    <% end %>
-  </div>
+  <% @fridges.each do |fridge| %>
+    <div class="own-fredges">
+      <%= link_to fridge.name, fridge_food_path(current_user.id,fridge.id), class:"btn" %>
+    </div>
+  <% end %>
 </div>
 
 
@@ -27,6 +27,7 @@
     padding: 40px 0;
     text-align: center;
     display: flex;
+    justify-content: center;
   }
   .fridge-naking{
     width: 300px;
