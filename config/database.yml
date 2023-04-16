@@ -49,6 +49,5 @@ test:
 #
 production:
   <<: *default
-  database: dishmaker_production
-  username: dishmaker
-  password: <%= ENV['DISHMAKER_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  url: <%= ENV['DATABASE_URL'] %>
