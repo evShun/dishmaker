@@ -10,13 +10,13 @@ DishMaker
 https://dishmaker.onrender.com
 
 ## テスト用アカウント	
-ログイン機能等を実装した場合は、ログインに必要な情報を記載。
- Email:test@gmail.com
- password:onakasuita4
+ログイン機能等を実装した場合は、ログインに必要な情報を記載。<br>
+ Email:test@gmail.com<br>
+ password:onakasuita4<br>
 
-<b>Basic認証</b>
-ID:admin
-Pass:0141
+<b>Basic認証</b><br>
+ID:admin<br>
+Pass:0141<br>
 
 ## 利用方法	
 1. ユーザーのサインアップまたはログインする。
@@ -35,7 +35,7 @@ Pass:0141
 後日記入
 
 ## 実装予定の機能	
-後一つ食材を足してもいい時の場合の食事作成ボタン
+後一つ食材を足してもいい時の場合の食事作成ボタン<br>
 その他細かく条件を絞るためのボタン
 
 ## データベース設計	
