@@ -19,6 +19,16 @@
   <% f.submit "食事を作る！" %>
 <% end %>
 
+<%# @recipeがある場合表示する %>
+<% if @recipe %>
+  <div class="recipe">
+    <h2>調理可能な食事</h2>
+    <div class="recipe-title">
+      <%= @recipe%>
+    </div>
+  </div>
+<% end %>
+
 <%= render "shared/footer" %>
 
 <style>
