@@ -35,7 +35,6 @@ class FoodsController < ApplicationController
                 messages: [{ role: "user", content: content}], # Required.
                 temperature: 0.7,
                            })
-    binding.pry
     @recipe = response.dig("choices",0,"message","content")
     render "show"
   end
