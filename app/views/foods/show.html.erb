@@ -17,6 +17,17 @@
 <%= form_with url:search_fridge_foods_path(:id), method: :get,local: true do |f| %>
 
   <% f.submit "食事を作る！" %>
+  ※30秒程かかる場合があります
+<% end %>
+
+<%# @recipeがある場合表示する %>
+<% if @recipe %>
+  <div class="recipe">
+    <h2>調理可能な食事</h2>
+    <div class="recipe-title">
+      <%= @recipe%>
+    </div>
+  </div>
 <% end %>
 
 <%= render "shared/footer" %>

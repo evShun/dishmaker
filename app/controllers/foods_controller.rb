@@ -23,19 +23,20 @@ class FoodsController < ApplicationController
   end
  
   def search
+    @food = Food.new
     @foods = Food.where(fridge_id: params[:id])
+    
+    list = Food.where(fridge_id: params[:id]).pluck(:item).join("、")
 
-    content = "以下の食材を使用して作成できる料理を教えてください
-              #{@foods} "
-    binding.pry
+    content = "次の食材を使用して作成できる料理を教えてください。#{list} "
     response = @client.chat(
                parameters: {
                 model: "gpt-3.5-turbo",
                 messages: [{ role: "user", content: content}], # Required.
                 temperature: 0.7,
-                stream: true,
                            })
-    @recipe = response.dig("choices", 0, "message", "content")
+    @recipe = response.dig("choices",0,"message","content")
+    render "show"
   end
 
   private
