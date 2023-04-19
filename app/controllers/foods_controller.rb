@@ -19,7 +19,9 @@ class FoodsController < ApplicationController
   end
 
   def destroy
-    food = Food.find(params[:id])
+    @food = Food.find(params[:fridge_id])
+    @food.destroy
+    redirect_to fridge_food_path(fridge_id:current_user.id ,id:params[:id])
   end
  
   def search
