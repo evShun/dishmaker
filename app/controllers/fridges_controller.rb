@@ -1,4 +1,6 @@
 class FridgesController < ApplicationController
+  before_action :authenticate_user!, only:[:show,:create]
+  before_action :other_login, only:[:show,:create]
   
   def index
   end
@@ -20,5 +22,11 @@ class FridgesController < ApplicationController
 private
   def fredge_params
     params.require(:fridge).permit(:name).merge(user_id: current_user.id)
+  end
+
+  def other_login
+    if user_signed_in? && current_user.id != params[:id].to_i
+        redirect_to fridge_path(current_user.id)
+    end
   end
 end
