@@ -50,3 +50,13 @@ a {
   padding: 40px 0;
 
 }
+
+/*********************** 
+      main 共通
+************************/
+
+.main{
+  height: 75vh;
+  width: 100vw;
+  background-color:lightyellow;
+}

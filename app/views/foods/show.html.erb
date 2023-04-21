@@ -1,94 +1,38 @@
 <%= render "shared/header" %>
-
-冷蔵庫の中身<br>
-<% @foods.each do |food| %>
-  <div class="item">
-  <%= food.item %><br>
-  <%= link_to "削除",  fridge_food_path(food.id), method: :delete, class:"food-destroy" %>
-  </div>
-<% end %>
-<br>
-<div class="add-item">
-  食材を追加する
-  <%= form_with url:fridge_food_path(:id),method: :put, model: @food ,local: true do |f| %>
-    <%= f.text_field :item, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%><br>
-    <%= f.submit "追加", class:"add-btn" %>
-  <% end %>
-</div>
-<br>
-<%= form_with url:search_fridge_foods_path(:id), method: :get,local: true do |f| %>
-
-  <%= f.submit "食事を作る！" %><br>
-  ※30秒程かかる場合があります
-<% end %>
-
-<%# @recipeがある場合表示する %>
-<% if @recipe %>
-  <div class="recipe">
-    <h2>調理可能な食事</h2>
-    <div class="recipe-title">
-      <%= @recipe%>
+<div class="foods-main">
+  <div class="item-question">
+    <div>冷蔵庫の中身</div>
+    <% @foods.each do |food| %>
+      <div class="item">
+        <div class="item-name">
+          <%= food.item %><br>
+        </div>
+        <%= link_to "削除",  fridge_food_path(food.id), method: :delete, class:"food-delite-btn" %>
+      </div>
+    <% end %>
+    <div class="add-item">
+      <%= form_with url:fridge_food_path(:id),method: :put, model: @food ,local: true do |f| %>
+        <%= f.text_field :item, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%>
+        <%= f.submit "追加", class:"add-btn" %>
+      <% end %>
     </div>
   </div>
-<% end %>
+  <div class="item-answer">
+    <%= form_with url:search_fridge_foods_path(:id), method: :get,local: true do |f| %>
+      <%= f.submit "食事を作る！" %>
+      ※30秒程かかる場合があります
+    <% end %>
+    <%# @recipeがある場合表示する %>
+    <% if @recipe %>
+      <div class="recipe">
+        <h2>調理可能な食事</h2>
+        <div class="recipe-title">
+          <%= @recipe%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 
 <%= render "shared/footer" %>
-
-<style>
-.item{
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 20px;
-  color: #000000;
-}
-.food-destroy{
-  display: inline-block;
-  width: 40px;
-  height: 14px;
-  background-color: #d5d4d4;
-  border-radius: 10px;
-  margin: 54px 0 0 48px;
-  padding: 5px;
-  text-align: center;
-  font-size: 14px;
-  color: #000000;
-}
-
-.add-item{
-  width: 264px;
-  height: 100px;
-  border: 1px solid #cccccc;
-  background-color: #bafb91;
-  border-radius: 10px;
-  margin: 0 10px;
-  position: relative;
-}
-
-.input{
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  padding: 5px;
-}
-
-.add-btn{
-  display: inline-block;
-  width: 40px;
-  height: 24px;
-  background-color: #d5d4d4;
-  border-radius: 10px;
-  margin: 10px 0 0 200px;
-  padding: 0px;
-  text-align: center;
-  font-size: 14px;
-  color: #000000;
-  position: absolute;
-}
-</style>

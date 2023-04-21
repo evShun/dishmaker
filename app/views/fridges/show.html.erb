@@ -1,44 +1,43 @@
 <%= render "shared/header" %>
-<div class="show-contents">
-  <div class="fridge-naking">
-  <%= form_with model: @fridge ,local: true do |f| %>
-    冷蔵庫を作成する<br><br>
-    <div>冷蔵庫の名前</div>
-    <%= f.text_field :name, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%><br>
-    <%= f.submit "作成" %>
-  <% end %>
-  </div>
-
+<div class="main">
+  <div class="show-contents">
     <%# fredgesを表示させる %>
-  <% @fridges.each do |fridge| %>
+    <% @fridges.each do |fridge| %>
     <div class="own-fredges">
       <%= link_to fridge.name, fridge_food_path(current_user.id,fridge.id), class:"btn" %>
     </div>
-  <% end %>
-</div>
+    <% end %>
 
+    <div class="fridge-naking">
+    <%= form_with model: @fridge ,local: true do |f| %>
+      冷蔵庫を作成する<br><br>
+      <div>冷蔵庫の名前</div>
+      <%= f.text_field :name, class:"input", id:"name" ,placeholder:"1~12字", maxlength:"12"%><br>
+      <%= f.submit "作成" %>
+    <% end %>
+    </div>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
 
 <style>
   .show-contents{
     margin: 0 auto;
-    width: 300px;
+    width: 240px;
+    height: 300px;
     padding: 40px 0;
     text-align: center;
     display: flex;
     justify-content: center;
   }
   .fridge-naking{
-    width: 300px;
-    height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 10px;
+    background-color: lightgray;
   }
   .own-fredges{
-    width: 300px;
-    height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 10px;
