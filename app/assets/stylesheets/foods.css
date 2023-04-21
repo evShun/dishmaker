@@ -1,0 +1,65 @@
+.foods-main{
+  height: 75vh;
+  width: 100vw;
+  background-color:lightyellow;
+  display: flex;
+}
+
+.item-question{
+margin: 12px;
+}
+.item{
+  width: 284px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 4px 10px;
+  padding: 6px;
+  display: flex;
+}
+.item-name{
+  font-size: 20px;
+  color: #000000;
+}
+.food-delite-btn{
+  width: 30px;
+  background-color: #d5d4d4;
+  border-radius: 5px;
+  margin: 0 0px 0 auto;
+  padding: 5px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.add-item{
+  width: 282px;
+  height: 36px;
+  border: 1px solid #cccccc;
+  background-color: #bafb91;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 6px;
+}
+.input{
+  width: 226px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-right:4px ;
+}
+.add-btn{
+  width: 40px;
+  height: 30px;
+  background-color: #d5d4d4;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  position: absolute;
+}
+
+.item-answer{
+  margin: 30px;
+  padding: 10px 20px;
+  border: #cccccc 2px solid;
+  border-radius: 10px;
+}
