@@ -37,6 +37,7 @@ Pass:0141<br>
 ## 実装予定の機能	
 後一つ食材を足す場合の食事作成ボタン<br>
 その他細かく条件を絞るためのボタン
+javascriptを用いて非同期通信にする
 
 ## データベース設計	
 ![ER図](app/assets/images/readme/ER.jpeg)
