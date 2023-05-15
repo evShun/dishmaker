@@ -1,6 +1,9 @@
 <%= render "shared/header" %>
 <div class="main">
   <br><br>
+  ＜DishMakerとは？＞<br>
+  openAIのAPIを利用した料理の提案アプリです。<br>
+  冷蔵庫の中身を入力すると、調理可能な料理を提案します。<br><br>
   <% if user_signed_in? %>
     <%= link_to '料理を聞く', fridge_path(current_user.id), class: "main-btn"%>
     <% else %>
